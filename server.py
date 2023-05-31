@@ -19,6 +19,6 @@ def server():
             print(f"Recv data from client: {data.decode()}")
             client_sock.send("Hello!\n".encode())
         client_sock.close()
-    #Start the server with blocking functions:
+    #Start the server with blocking functions: accept(), recv(), send()
     server()
     

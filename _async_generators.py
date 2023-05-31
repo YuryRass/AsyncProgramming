@@ -46,10 +46,10 @@ def event_loop():
             reason, sock = next(task) # example: ('read', client_sock)
             if reason == 'read':
                 to_read[sock] = task
-                print("Len of tasks:", len(tasks))
-            
+                print("Len of read-tasks:", len(tasks))            
             else: #if reason == 'write':
                 to_write[sock] = task
+                print("Len of write-tasks:", len(tasks))
         except StopIteration:
             pass
             
